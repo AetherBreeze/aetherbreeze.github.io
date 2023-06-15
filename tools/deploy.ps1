@@ -5,7 +5,7 @@ $CYAN = [ConsoleColor]::Cyan
 $GREEN = [ConsoleColor]::Green
 $RED = [ConsoleColor]::Red
 
-Write-Host "Deploy to ./$DIST:`n" -ForegroundColor $CYAN
+Write-Host "Deploy to ./$DIST`n" -ForegroundColor $CYAN
 
 Write-Host "Run build script..." -ForegroundColor $GREEN
 Write-Host "> ./tools/build.ps1"
