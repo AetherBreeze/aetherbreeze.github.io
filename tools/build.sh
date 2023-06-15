@@ -25,11 +25,11 @@ echo -e "> [-d ${DIST} ] || mkdir ${DIST}\n"
 
 echo -e "\n${GREEN}Publish the templates...${WHITE}"
 echo "> ts-node ./tools/publish.ts page"
-ts-node ./tools/publish.ts page
+./node_modules/.bin/ts-node ./tools/publish.ts page
 echo "> ts-node ./tools/publish.ts article"
-ts-node ./tools/publish.ts article
+./node_modules/.bin/ts-node ./tools/publish.ts article
 echo "> ts-node ./tools/publish.ts work"
-ts-node ./tools/publish.ts work
+./node_modules/.bin/ts-node ./tools/publish.ts work
 
 echo -e "\n${GREEN}Reset distribution directory...${WHITE}"
 echo "> rm -r ${DIST}/*"
@@ -55,10 +55,10 @@ echo "> cp -r ./images/* ${DIST}/images/"
 cp -r ./images/* $DIST/images/
 
 echo -e "\n${GREEN}Minify css files...${WHITE}"
-cleancss --batch --batch-suffix '' $DIST/styles/*.css
+./node_modules/.bin/cleancss --batch --batch-suffix '' $DIST/styles/*.css
 
 echo -e "\n${GREEN}Minify html files...${WHITE}"
-html-minifier --input-dir $DIST --output-dir $DIST --file-ext html --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype
+./node_modules/.bin/html-minifier --input-dir $DIST --output-dir $DIST --file-ext html --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype
 
 
 if test -f "./CNAME"; then
@@ -67,4 +67,3 @@ if test -f "./CNAME"; then
 fi
 
 echo -e "\n${CYAN}Done!${WHITE}"
-

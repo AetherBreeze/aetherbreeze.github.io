@@ -9,9 +9,9 @@
   "main": "index.js",
   "scripts": {
     "start": "http-server ./dist",
-    "build": "bash ./tools/build.sh",
+    "build": "powershell.exe -command .\\tools\\build.ps1",
     "publish": "ts-node ./tools/publish.ts",
-    "deploy": "bash ./tools/deploy.sh"
+    "deploy": "powershell.exe -command .\\tools\\deploy.ps1"
   },
   "author": "parksb",
   "license": "MIT",

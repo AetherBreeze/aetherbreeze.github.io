@@ -165,8 +165,9 @@
 #article-content-container a:hover,
 #article-content-container a:focus {
   text-decoration: none;
-  background-color: black;
-  color: white;
+  background-color: grey;
+  color: black;
+  transition: all 0.3 ease-out;
 }
 
 #article-content-container pre {

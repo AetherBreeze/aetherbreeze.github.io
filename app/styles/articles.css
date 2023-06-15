@@ -27,8 +27,18 @@
 #articles-container a:focus,
 #articles-container a:hover li,
 #articles-container a:focus li {
-  background-color: black;
+  background-color: grey;
+  color: black;
+  transition: all 0.3s ease-out;
+}
+
+#articles-container time:hover,
+#articles-container time:focus,
+#articles-container time:hover li,
+#articles-container time:focus li {
+  background-color: grey;
   color: white;
+  transition: all 0.3s ease-out;
 }
 
 #articles-container .articles-tags {
