@@ -11,7 +11,7 @@ Write-Host "Run build script..." -ForegroundColor $GREEN
 Write-Host "> ./tools/build.ps1"
 ./tools/build.ps1
 
-if ((git status -s) -eq "") {
+if ((git status -s).Length -eq 0) {
   Write-Host "Modify gitignore list temporarily..." -ForegroundColor $GREEN
 
   if ($env:OSTYPE -eq "darwin") {
