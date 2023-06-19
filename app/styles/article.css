@@ -259,7 +259,7 @@
 
 #article-content-container p .katex * {
   font-family: 'Times New Roman', serif;
-  font-size: 16px;
+  font-size: 1em;
 }
 
 #article-content-container p .msupsub * {
