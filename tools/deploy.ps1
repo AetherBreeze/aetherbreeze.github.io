@@ -30,9 +30,8 @@ if ((git status -s).Length -eq 0) {
   git commit -m "dist: $DATE"
 
   Write-Host "`nUse subtree push to gh-pages branch..." -ForegroundColor $GREEN
-  $HASH = git subtree split --prefix $DIST master
-  Write-Host "> cd git push origin $HASH :gh-pages --force"
-  git push origin "$HASH":gh-pages --force
+  Write-Host "> cd git push origin `git subtree split --prefix $DIST master`:gh-pages --force"
+  git subtree push --prefix=$DIST origin gh-pages
 
   Write-Host "`nReset the temporary changes..."
   Write-Host "> git reset HEAD~"
