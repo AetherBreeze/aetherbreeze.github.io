@@ -31,6 +31,7 @@ if ((git status -s).Length -eq 0) {
 
   Write-Host "`nUse subtree push to gh-pages branch..." -ForegroundColor $GREEN
   Write-Host "> cd git push origin `git subtree split --prefix $DIST master`:gh-pages --force"
+  git subtree split --prefix dist master
   git subtree push --prefix=$DIST origin gh-pages
 
   Write-Host "`nReset the temporary changes..."
