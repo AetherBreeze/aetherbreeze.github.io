@@ -1,5 +1,5 @@
 ---
-id: 3
+id: 2
 title: "Quantum Mechanics Speedrun (3)"
 subtitle: ""
 date: "2023.06.21"
@@ -103,9 +103,9 @@ First, we modeled quantum systems with a list of probabilities.
 
 Next, we modeled them as a list of numbers whose squares yielded the probabilities.
 
-**Now, we will model them as a list of** ***complex numbers*** **whose magnitudes yield the probabilities.**
+**Now, we will model them as a list of** ***complex numbers*** **whose squared magnitudes yield the probabilities.**
 
-This solves our problem now and forever. There are only two real numbers that square to 0.5, but *there are an infinite amount of complex numbers with length 0.5* ($`\sqrt{0.5}e^{i a}`$, for all $`a`$). Thus we will never again have to worry about two different states having the same representation.
+This solves our problem now and forever. There are only two real numbers that square to 0.5, but *there are an infinite amount of complex numbers with squared length 0.5* ($`\sqrt{0.5}e^{i a}`$, for all $`a`$). Thus we will never again have to worry about two different states having the same representation.
 
 Let's put this idea into action. We need to write four different states ($`\ket{y_\pm}, \ket{z_\pm}`$) such that they all have a probability of $`0.5`$ for both $`\ket{x_+}`$ and $`\ket{x_-}`$. This might look something like
 
