@@ -65,4 +65,4 @@ Similarly, we can use our expression from last time to find the change-of-basis 
 
 ## Putting It In Math
 
-This identification between quantum mechanics and linear algebra is one of the greatest triumphs in physics. Next time, we will re-state our entire theory in terms of linear algebra. This will give us a whole suite of powerful tools to work with, and allow us to generalize quantum mechanics to the continuou case.
+This identification between quantum mechanics and linear algebra is one of the greatest triumphs in physics. Next time, we will re-state our entire theory in terms of linear algebra. This will give us a whole suite of powerful tools to work with, and allow us to generalize quantum mechanics to the continuous case.
