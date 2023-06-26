@@ -75,7 +75,7 @@ The principle of unity for discrete systems says that, for a system $`\ket{S}`$ 
 \sum_{a = 1}^N |\bra{s_a} \ket{S}|^2 = 1
 ```
 
-Generalizing sums like this to the continuous case is pretty simple. Usually, all we have to do is replace the sum with an integral. In this case, we also note that $`\bra{s_a} \ket{S}` is just the $`a`$th element of $`\ket{S}`$. Since the $`a`$th element of a continuous vector $`\ket{S(x)}`$ is just $`\ket{S(a)}`$, our continuous version of the principle of unity is
+Generalizing sums like this to the continuous case is pretty simple. Usually, all we have to do is replace the sum with an integral. In this case, we also note that $`\bra{s_a} \ket{S}`$ is just the $`a`$th element of $`\ket{S}`$. Since the $`a`$th element of a continuous vector $`\ket{S(x)}`$ is just $`\ket{S(a)}`$, our continuous version of the principle of unity is
 
 ```math
 \int |\ket{S(x)}|^2 dx = 1
