@@ -112,7 +112,7 @@ Of course there is. All we have to do is multiply by a diagonal matrix!
 = \begin{bmatrix} e^{i \frac{E_1}{\hbar} t} && 0 && ... \\ 0 && e^{i \frac{E_2}{\hbar} t} && ... \\ ... \\ ... && 0 && e^{i \frac{E_N}{\hbar} t} \end{bmatrix} \ket{S}(0)
 ```
 
-(One day I will find a math library with matrices that don't make my eyes spontaneously develop cataracts, but today is not that day. Just know that it's a matrix with $`e^{i \frac{E_x}{\hbar} t}`$ on the diagonal.)
+One day I will find a math library with matrices that don't make my eyes spontaneously develop cataracts, but today is not that day. Just know that it's a matrix $`e^{i \frac{E_x}{\hbar} t}`$ with on the diagonal.
 
 Because of how long we've been working on this, it may seem less impressive let it is. For effect, then, let us re-state: *time evolution in quantum mechanics is just matrix multiplication!*
 
