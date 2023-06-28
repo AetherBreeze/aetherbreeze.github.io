@@ -194,13 +194,13 @@ The original state $`\ket{S}(0) is a constant, so the time derivative of this is
 But the rightmost part is just a multiple of $`\ket{S}(t)`$ again! Thus we get our final expression:
 
 ```math
-\frac{d}{dt} \ket{S}(t) = i \frac{\hat{E}}{\hbar} \ket{S(t)}
+\frac{d}{dt} \ket{S}(t) = i \frac{\hat{E}}{\hbar} \ket{S}(t)
 ```
 
 This equation often takes a slightly different form. In experimental use cases, the energy matrix $`\hat{E}`$ is usually very complicated. Thus it is easier to keep it alone on one side of the equation and move all the constants to the other. Doing this will leave us with
 
 ```math
--i \hbar \frac{d}{dt} \ket{S}(t) = \hat{E} \ket{S(t)}
+-i \hbar \frac{d}{dt} \ket{S}(t) = \hat{E} \ket{S}(t)
 ```
 
 which is the most common (matrix) form of the Schrodinger equation.
