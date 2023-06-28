@@ -113,7 +113,7 @@ Thus we have made the contact we desired, and we can write the equations of moti
 
 ## What If $`\hat{E}`$ Isn't Diagonal?
 
-So far, we've made things easy for ourselves by expanding $`\ket{S}`$ in terms of energy states. In practice we usually won't have this luxury; we tend to expand $`\ket{S}`$ in terms of things like position, momentum, magnetic field, and other variables. In these scenarios, the energy matrix $`\hat{E}`$ isn't so simple. It's still a matrix whose eigenvectors are the energy states $`ket{E_a}`$, but these states are no longer the basis vectors. This means that $`\hat{E}`$ usually isn't diagonal.
+So far, we've made things easy for ourselves by expanding $`\ket{S}`$ in terms of energy states. In practice we usually won't have this luxury; we tend to expand $`\ket{S}`$ in terms of things like position, momentum, magnetic field, and other variables. In these scenarios, the energy matrix $`\hat{E}`$ isn't so simple. It's still a matrix whose eigenvectors are the energy states $`\ket{E_a}`$, but these states are no longer the basis vectors. This means that $`\hat{E}`$ usually isn't diagonal.
 
 This is a problem. Our above proof relied heavily on the fact that $`\hat{E}`$ was diagonal. Now we need to approach the matrix exponential without this cheat code.
 
@@ -164,7 +164,7 @@ e^{\hat{E}} = \hat{B} (I + \hat{D} + \frac{1}{2!} \hat{D}^2 + \frac{1}{3!} \hat{
 This might seem a little confusing. In terms of basis transformations, though, it's pretty easy. We read from right to left:
 
 - First, we transform from our current basis to the energy basis
-- Next, we apply the diagonal matrix with eigenvalues $`e^{\frac{E_a}}, just like in the diagonal case.
+- Next, we apply the diagonal matrix with eigenvalues $`e^{\frac{E_a}}`$, just like in the diagonal case.
 - Finally, we transform back to the original basis
 
 **In short, this is exactly what we wanted!** We showed that even if we're in a basis where $`\hat{E}`$ is not diagonal, our exponential trick will still work; the diagonal exponential matrix will still be applied to the energy states.
@@ -185,7 +185,7 @@ The answer is: it can if we want it to. Our expression for $`\ket{S}(t)`$ is so 
 \ket{S}(t) = e^{i \frac{\hat{E}}{\hbar} t} \ket{S}(0)
 ```
 
-The original state $`\ket{S}(0) is a constant, so the time derivative of this is just
+The original state $`\ket{S}(0)`$ is a constant, so the time derivative of this is just
 
 ```math
 \frac{d}{dt} \ket{S}(t) = i \frac{\hat{E}}{\hbar} e^{i \frac{\hat{E}}{\hbar} t} \ket{S}(0)
