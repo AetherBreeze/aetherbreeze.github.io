@@ -164,7 +164,7 @@ e^{\hat{E}} = \hat{B} (I + \hat{D} + \frac{1}{2!} \hat{D}^2 + \frac{1}{3!} \hat{
 This might seem a little confusing. In terms of basis transformations, though, it's pretty easy. We read from right to left:
 
 - First, we transform from our current basis to the energy basis
-- Next, we apply the diagonal matrix with eigenvalues $`e^{\frac{E_a}}`$, just like in the diagonal case.
+- Next, we apply the diagonal matrix with eigenvalues $`e^{E_a}`$, just like in the diagonal case.
 - Finally, we transform back to the original basis
 
 **In short, this is exactly what we wanted!** We showed that even if we're in a basis where $`\hat{E}`$ is not diagonal, our exponential trick will still work; the diagonal exponential matrix will still be applied to the energy states.
