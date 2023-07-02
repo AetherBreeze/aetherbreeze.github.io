@@ -2,7 +2,7 @@
 id: 10
 title: "Quantum Mechanics Speedrun (11)"
 subtitle: ""
-date: "2023.06.28"
+date: "2023.06.29"
 tags: "qft"
 ---
 
