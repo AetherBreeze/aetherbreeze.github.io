@@ -46,16 +46,16 @@ Let's answer this question in parts. We start off with a particle in position $`
 \ket{S} = \ket{x_1}
 ```
 
-We then wait until time $`t`$. Recall that in our formalism, this just means acting on the state with the **time-evolution operator** $`e^{i \frac{\hat{H}}{\hbar} t}`$:
+We then wait until time $`t`$. Recall that in our formalism, this just means acting on the state with the **time-evolution operator** $`e^{i \frac{\hat{E}}{\hbar} t}`$:
 
 ```math
-\ket{S}(t) = e^{i \frac{\hat{H}}{\hbar} t} \ket{S}(0) = e^{i \frac{\hat{H}}{\hbar} t} \ket{x_1}
+\ket{S}(t) = e^{i \frac{\hat{E}}{\hbar} t} \ket{S}(0) = e^{i \frac{\hat{E}}{\hbar} t} \ket{x_1}
 ```
 
 Finally, to find the probability of measuring this particle at position $`x_2`$, we take the dot product with the basis vector $`\ket{x_2}`$:
 
 ```math
-\bra{x_2} e^{i \frac{\hat{H}}{\hbar} t} \ket{x_1}
+\bra{x_2} e^{i \frac{\hat{E}}{\hbar} t} \ket{x_1}
 ```
 
 This is the fundamental "thing" we want to calculate. Unfortunately, as is often the case in quantum mechanics, actually doing so is an incredible pain. The time evolution operator of an interesting system is extremely complicated, so much so that this equation can often only be solved approximately. Thus this expression, while simple, is not terribly helpful.
@@ -67,19 +67,19 @@ To solve this problem, we turn to one of the most powerful tricks in physics: *z
 Let's take another look at that deceptively simple expression:
 
 ```math
-\bra{x_2} e^{i \frac{\hat{H}}{\hbar} t} \ket{x_1}
+\bra{x_2} e^{i \frac{\hat{E}}{\hbar} t} \ket{x_1}
 ```
 
 This is hard to calculate because of the large time jump. To solve this, We want to "chop" this path up into little intervals of time and calculate each little interval individually. Let's say we chop it up into $`N`$ equally long intervals:
 
 ```math
-\bra{x_2} e^{i \frac{\hat{H}}{\hbar} \sum_{a=1}^N \frac{t}{N}} \ket{x_1}
+\bra{x_2} e^{i \frac{\hat{E}}{\hbar} \sum_{a=1}^N \frac{t}{N}} \ket{x_1}
 ```
 
 We can then use a highly convenient property of $`e`$: turning sums in the exponent into products of exponentials:
 
 ```math
-\bra{x_2} e^{i \frac{\hat{H}}{\hbar} \frac{t}{N}} e^{i \frac{\hat{H}}{\hbar} \frac{t}{N}} e^{i \frac{\hat{H}}{\hbar} \frac{t}{N}} ... \ket{x_1} = \bra{x_2} \Pi_{a=1}^N e^{i \frac{\hat{H}}{\hbar} \frac{t}{N}} \ket{x_1}
+\bra{x_2} e^{i \frac{\hat{E}}{\hbar} \frac{t}{N}} e^{i \frac{\hat{E}}{\hbar} \frac{t}{N}} e^{i \frac{\hat{E}}{\hbar} \frac{t}{N}} ... \ket{x_1} = \bra{x_2} \Pi_{a=1}^N e^{i \frac{\hat{E}}{\hbar} \frac{t}{N}} \ket{x_1}
 ```
 
 This is the first step. We've managed to split the single, complicated time evolution operator into several simple time evolution operators. However, these operators aren't much help unless they have something to act on. That brings us to the real trick of the path integral formulation:
@@ -91,7 +91,7 @@ I've always said the defining nature of a good name is that it makes description
 We want to find some states we can let the small, simple time evolution operators act on in the path expansion:
 
 ```math
-\bra{x_2} e^{i \frac{\hat{H}}{\hbar} \frac{t}{N}} e^{i \frac{\hat{H}}{\hbar} \frac{t}{N}} e^{i \frac{\hat{H}}{\hbar} \frac{t}{N}} ... \ket{x_1}
+\bra{x_2} e^{i \frac{\hat{E}}{\hbar} \frac{t}{N}} e^{i \frac{\hat{E}}{\hbar} \frac{t}{N}} e^{i \frac{\hat{E}}{\hbar} \frac{t}{N}} ... \ket{x_1}
 ```
 
 We've already chopped up time into small chunks. It's intuitive, then, that we might want to chop up distance into small chunks as well. That is, we might try to calculate (probability of moving from $`x_1`$ to $`x_2`$) as
@@ -103,7 +103,7 @@ We've already chopped up time into small chunks. It's intuitive, then, that we m
 In our formulation, we could write each of these intervals pretty simply as a dot product:
 
 ```math
-\text{prob}(x_1 \to x_2) ?= \sum_{\text{all } y_1} \sum_{\text{all } y_2} ... \sum_{\text{all } y_N} (\bra{x_2} e^{i \frac{\hat{H}}{\hbar} \frac{t}{N}} \ket{y_N}) (\bra{y_N} e^{i \frac{\hat{H}}{\hbar} \frac{t}{N}} \ket{y_{N - 1}}) ... (\bra{y_2} e^{i \frac{\hat{H}}{\hbar} \frac{t}{N}} \ket{y_1}) (\bra{y_1} e^{i \frac{\hat{H}}{\hbar} \frac{t}{N}} \ket{x_1}) 
+\text{prob}(x_1 \to x_2) ?= \sum_{\text{all } y_1} \sum_{\text{all } y_2} ... \sum_{\text{all } y_N} (\bra{x_2} e^{i \frac{\hat{E}}{\hbar} \frac{t}{N}} \ket{y_N}) (\bra{y_N} e^{i \frac{\hat{E}}{\hbar} \frac{t}{N}} \ket{y_{N - 1}}) ... (\bra{y_2} e^{i \frac{\hat{E}}{\hbar} \frac{t}{N}} \ket{y_1}) (\bra{y_1} e^{i \frac{\hat{E}}{\hbar} \frac{t}{N}} \ket{x_1}) 
 ```
 
 ## Ideas Unto Math
@@ -111,7 +111,7 @@ In our formulation, we could write each of these intervals pretty simply as a do
 But we already know what $`\text{prob}(x_1 \to x_2)`$ is. Thus we can put this idea to the mathematical test:
 
 ```math
-\bra{x_2} e^{i \frac{\hat{H}}{\hbar} \frac{t}{N}} e^{i \frac{\hat{H}}{\hbar} \frac{t}{N}} e^{i \frac{\hat{H}}{\hbar} \frac{t}{N}} ... \ket{x_1} = \sum_{\text{all } y_1} \sum_{\text{all } y_2} ... \sum_{\text{all } y_N} (\bra{x_2} e^{i \frac{\hat{H}}{\hbar} \frac{t}{N}} \ket{y_N}) (\bra{y_N} e^{i \frac{\hat{H}}{\hbar} \frac{t}{N}} \ket{y_{N - 1}}) ... (\bra{y_2} e^{i \frac{\hat{H}}{\hbar} \frac{t}{N}} \ket{y_1}) (\bra{y_1} e^{i \frac{\hat{H}}{\hbar} \frac{t}{N}} \ket{x_1}) 
+\bra{x_2} e^{i \frac{\hat{E}}{\hbar} \frac{t}{N}} e^{i \frac{\hat{E}}{\hbar} \frac{t}{N}} e^{i \frac{\hat{E}}{\hbar} \frac{t}{N}} ... \ket{x_1} = \sum_{\text{all } y_1} \sum_{\text{all } y_2} ... \sum_{\text{all } y_N} (\bra{x_2} e^{i \frac{\hat{E}}{\hbar} \frac{t}{N}} \ket{y_N}) (\bra{y_N} e^{i \frac{\hat{E}}{\hbar} \frac{t}{N}} \ket{y_{N - 1}}) ... (\bra{y_2} e^{i \frac{\hat{E}}{\hbar} \frac{t}{N}} \ket{y_1}) (\bra{y_1} e^{i \frac{\hat{E}}{\hbar} \frac{t}{N}} \ket{x_1}) 
 ```
 
 Luckily for us, these two sides are already pretty similar. In fact, all that's changed on the right side is that we've inserted $`\sum_{\text{all } y_a} \ket{a} \bra{a}`$ for all the intermediate points $`y_a`$. Thus to show that our "sum over little paths" idea holds, we have to show that
@@ -146,12 +146,12 @@ Nice! Through some deft mathematical trickery, we've managed to prove that
 \sum_{\text{all } y_a} \ket{y_a} \bra{y_a} = 1
 ```
 
-and thus that we can insert these elements into $`\bra{x_2} e^{i \frac{\hat{H}}{\hbar} \frac{t}{N}} e^{i \frac{\hat{H}}{\hbar} \frac{t}{N}} e^{i \frac{\hat{H}}{\hbar} \frac{t}{N}} ... \ket{x_1}`$ without messing anything up.
+and thus that we can insert these elements into $`\bra{x_2} e^{i \frac{\hat{E}}{\hbar} \frac{t}{N}} e^{i \frac{\hat{E}}{\hbar} \frac{t}{N}} e^{i \frac{\hat{E}}{\hbar} \frac{t}{N}} ... \ket{x_1}`$ without messing anything up.
 
 Thus we reach the fundamental goal of this exercise: reducing a complex expression that looks simple into a simple expression that looks complex:
 
 ```math
-\bra{x_2} e^{i \frac{\hat{H}}{\hbar} t} \ket{x_1} = \sum_{\text{all } y_1} \sum_{\text{all } y_2} ... \sum_{\text{all } y_N} (\bra{x_2} e^{i \frac{\hat{H}}{\hbar} \frac{t}{N}} \ket{y_N}) (\bra{y_N} e^{i \frac{\hat{H}}{\hbar} \frac{t}{N}} \ket{y_{N - 1}}) ... (\bra{y_2} e^{i \frac{\hat{H}}{\hbar} \frac{t}{N}} \ket{y_1}) (\bra{y_1} e^{i \frac{\hat{H}}{\hbar} \frac{t}{N}} \ket{x_1}) 
+\bra{x_2} e^{i \frac{\hat{E}}{\hbar} t} \ket{x_1} = \sum_{\text{all } y_1} \sum_{\text{all } y_2} ... \sum_{\text{all } y_N} (\bra{x_2} e^{i \frac{\hat{E}}{\hbar} \frac{t}{N}} \ket{y_N}) (\bra{y_N} e^{i \frac{\hat{E}}{\hbar} \frac{t}{N}} \ket{y_{N - 1}}) ... (\bra{y_2} e^{i \frac{\hat{E}}{\hbar} \frac{t}{N}} \ket{y_1}) (\bra{y_1} e^{i \frac{\hat{E}}{\hbar} \frac{t}{N}} \ket{x_1}) 
 ```
 
 The first expression is compact, but involves a long time gap and is near-impossible to calculate. The second expression has a lot of terms, but since they all deal with a very small distance and time gap, we might actually be able to evaluate them.
