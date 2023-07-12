@@ -59,25 +59,31 @@ Notice how the momentum operator has suddenly showed up. This should immediately
 In fact, you might remember that we've already solved this problem. Just last time we derived a very clever way to insert basis vectors into an expression without changing it:
 
 ```math
-\sum_{p_n} \ket{p_n} \bra{p_n} = 1
+\sum_{x_n} \ket{x_n} \bra{x_n} = 1
 ```
 
-We derived this expression using position basis vectors. However, since the rule of unity applies to *every* set of basis vectors, we can easily generalize it to use momentum basis vectors instead. Using this identity, we can insert $`1`$ into the expression to get
+We derived this expression using position basis vectors. However, since the rule of unity applies to *every* set of basis vectors, we can easily generalize it to use momentum basis vectors instead. Though I hate to do so, we'll invoke a result of pure mathematics to get it:
 
 ```math
-\sum_{p_n} \bra{y_a} e^{i \frac{\hat{P}^2}{2 m \hbar} \frac{t}{N}} \ket{p_n} \bra{p_n} \ket{y_b}
+\sum_{p_n} \ket{p_n} \bra{p_n} = 2 \pi
+```
+
+Using this identity, we can insert $`1`$ into the expression to get
+
+```math
+\frac{1}{2 \pi} \sum_{p_n} \bra{y_a} e^{i \frac{\hat{P}^2}{2 m \hbar} \frac{t}{N}} \ket{p_n} \bra{p_n} \ket{y_b}
 ```
 
 Now we're talking. We showed in the quantum mechanics speedrun that if $`\ket{p_n}`$ is an eigenvector of $`\hat{P}`$ with eigenvalue $`p_n`$, it's also an eigenvalue of $`e^{\hat{P}}`$ with eigenvalue $`e^{p_n}`$. Thus we can finally get rid of this troublesome operator by letting it do act on a momentum eigenvector:
 
 ```math
-\sum_{p_n} \bra{y_a} e^{i \frac{p_n^2}{2 m \hbar} \frac{t}{N}} \ket{p_n} \bra{p_n} \ket{y_b}
+\frac{1}{2 \pi} \sum_{p_n} \bra{y_a} e^{i \frac{p_n^2}{2 m \hbar} \frac{t}{N}} \ket{p_n} \bra{p_n} \ket{y_b}
 ```
 
 Since this middle term is now just a number, we can take it out of the dot product to get
 
 ```math
-\sum_{p_n} e^{i \frac{p_n^2}{2 m \hbar} \frac{t}{N}} \bra{y_a} \ket{p_n} \bra{p_n} \ket{y_b}
+\frac{1}{2 \pi} \sum_{p_n} e^{i \frac{p_n^2}{2 m \hbar} \frac{t}{N}} \bra{y_a} \ket{p_n} \bra{p_n} \ket{y_b}
 ```
 
 ## Momentum And Position Dot Products
@@ -129,7 +135,7 @@ With a single stroke, we can also calculate the other dot product. Note that bec
 We have now evaluated every part of this little path's probability density. Let's put it all together. Drumroll, please:
 
 ```math
-\bra{y_a} e^{i \frac{\hat{P}^2}{2 m \hbar} \frac{t}{N}} \ket{y_b} = \sum_{p_n} e^{i \frac{p_n^2}{2 m \hbar} \frac{t}{N}} \bra{y_a} \ket{p_n} \bra{p_n} \ket{y_b} = \sum_{p_n} e^{i \frac{p_n^2}{2 m \hbar} \frac{t}{N}} e^{-i \frac{p_n y_a}{\hbar}} e^{i \frac{p_n x_m}{\hbar}} = \sum_{p_n} e^{i \frac{p_n^2}{2 m \hbar} \frac{t}{N}} e^{i \frac{p_n (y_a - y_b)}{\hbar}}
+\bra{y_a} e^{i \frac{\hat{P}^2}{2 m \hbar} \frac{t}{N}} \ket{y_b} = \frac{1}{2 \pi} \sum_{p_n} e^{i \frac{p_n^2}{2 m \hbar} \frac{t}{N}} \bra{y_a} \ket{p_n} \bra{p_n} \ket{y_b} = \frac{1}{2 \pi} \sum_{p_n} e^{i \frac{p_n^2}{2 m \hbar} \frac{t}{N}} e^{-i \frac{p_n y_a}{\hbar}} e^{i \frac{p_n x_m}{\hbar}} = \frac{1}{2 \pi} \sum_{p_n} e^{i \frac{p_n^2}{2 m \hbar} \frac{t}{N}} e^{i \frac{p_n (y_a - y_b)}{\hbar}}
 ```
 
 This... doesn't look any better. In fact, this arguably looks worse. How the hell are we supposed to actually calculate this?
@@ -137,7 +143,7 @@ This... doesn't look any better. In fact, this arguably looks worse. How the hel
 The answer is twofold. First of all, since we're dealing with the position (and momentum) of a particle, it's reasonable to assume there are continuously many possible positions. Thus we can take the continuous limit and turn this sum into an integral:
 
 ```math
-\sum_{p_n} e^{i \frac{p_n^2}{2 m \hbar} \frac{t}{N}} e^{i \frac{p_n (y_a - y_b)}{\hbar}} \to \int e^{i \frac{p_n^2}{2 m \hbar} \frac{t}{N}} e^{i \frac{p_n (y_a - y_b)}{\hbar}} dp_n
+\frac{1}{2 \pi} \sum_{p_n} e^{i \frac{p_n^2}{2 m \hbar} \frac{t}{N}} e^{i \frac{p_n (y_a - y_b)}{\hbar}} \to \frac{1}{2 \pi} \int e^{i \frac{p_n^2}{2 m \hbar} \frac{t}{N}} e^{i \frac{p_n (y_a - y_b)}{\hbar}} dp_n
 ```
 
 One would be well excused for thinking we've made things even worse. However, the trained physicists among you might know better. What we have just written is a very famous expression, not just in physics, but in classical mathematics as well. It is nothing other than a **Gaussian integral,** and a large chunk of quantum mechanics is based on its evaluation.
