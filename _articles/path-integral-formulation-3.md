@@ -210,13 +210,13 @@ d = i \frac{y_a - y_b}{\hbar}
 We will simplify a little by writing $`\frac{t}{N} = \delta_N t`$. Plugging and chugging, we find that
 
 ```math
-\int_{-\infty}^{\infty} e^{- c x^2 + d x} = e^{\frac{d^2}{4 c}} \sqrt{\frac{\pi}{c}} = e^{i m \frac{(y_b - y_a)^2}{2 \delta_N t}} \sqrt{\frac{i 2 m \hbar \pi}{\delta_N t}}
+\int_{-\infty}^{\infty} e^{- c x^2 + d x} = e^{\frac{d^2}{4 c}} \sqrt{\frac{\pi}{c}} = e^{-i m \frac{(y_b - y_a)^2}{2 \delta_N t}} \sqrt{\frac{i 2 m \hbar \pi}{\delta_N t}}
 ```
 
 Finally, multiplying through by the constant $`\frac{1}{2 \pi}`$ gives us our final probability density:
 
 ```math
-\frac{1}{2 \pi} \int e^{i \frac{p_n^2}{2 m \hbar} \frac{t}{N}} e^{i \frac{p_n (y_a - y_b)}{\hbar}} dp_n = e^{i m \frac{(y_b - y_a)^2}{2 \delta_N t}} \sqrt{\frac{i m \hbar}{2 \pi \delta_N t}}
+\frac{1}{2 \pi} \int e^{i \frac{p_n^2}{2 m \hbar} \frac{t}{N}} e^{i \frac{p_n (y_a - y_b)}{\hbar}} dp_n = e^{-i m \frac{(y_b - y_a)^2}{2 \delta_N t}} \sqrt{\frac{i m \hbar}{2 \pi \delta_N t}}
 ```
 
 ## Next Steps
