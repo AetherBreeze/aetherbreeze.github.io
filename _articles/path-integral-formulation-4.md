@@ -133,7 +133,7 @@ Since the potential value operator $`\hat{V}(\hat{X})`$ is a function of the pos
 This factor of $`e^{i \frac{V(y_b)}{\hbar} \frac{t}{N}}`$ gets carried along as a spectator for the Gaussian integral odyssey. Then, when we take the limit $`\frac{t}{N} \to dt`$, it gets pulled into the integral. Note that, since it doesn't itself go through the Gaussian integral, **it doesn't pick up the minus sign that the kinetic energy does**:
 
 ```math
-\int e^{i \int_0^T -\frac{m \dot{y}(t)^2}{2} + V(y(t)) dt} dy(t)
+\int e^{\frac{i}{\hbar} \int_0^T -\frac{m \dot{y}(t)^2}{2} + V(y(t)) dt} dy(t)
 ```
 
 This lack of a minus sign is crucial. It means that the term in the integral isn't quite the classical energy, but instead a strange new thing:
