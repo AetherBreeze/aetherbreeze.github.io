@@ -6,7 +6,7 @@ date: "2023.07.17"
 tags: "qft"
 ---
 
-# The Mattress Approximation
+# Potential Energy from First Principles
 
 Last time, we started writing down the energy of a field $`F(x, t)`$. We did this using the assumption that every point of the field in space $`F(x_1, t)`$ behaves like a particle $`f_{x_1}(t)`$. This allowed us to write the kinetic energy of each point of the field. Now, we will use a beautiful series of tricks to write the potential (or "positional" energy)
 
