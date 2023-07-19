@@ -115,7 +115,7 @@ This is easier because the energy operator $`\hat{E}`$, and thus the time evolut
 The contained term is now just the position transition probability density, which we already know we can calculate with a path integral:
 
 ```math
-\bra{S_2} e^{i \frac{\hat{E}}{\hbar} T} \ket{S_1} = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} \bra{S_2} \ket{x_2} \bra{x_1} \ket{S_2} \int e^{\frac{i}{\hbar} \int_{0}^{T} L} dy(t)
+\bra{S_2} e^{i \frac{\hat{E}}{\hbar} T} \ket{S_1} = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} \bra{S_2} \ket{x_2} \bra{x_1} \ket{S_2} \int e^{\frac{i}{\hbar} \int_{0}^{T} L} dy(t) dx_1 dx_2
 ```
 
 This may not seem better, but the fact that operators are no longer acting on the weird states $`S_1, S_2`$ makes all the difference. Nine times out of ten, the path integral version is much easier to calculate.
@@ -149,7 +149,7 @@ For future reference, the term inside the integral here is often called the **La
 Now we see the power of the path integral method. Simply by rewriting the Lagrangian, we generalized our method of calculating probabilities from particles to fields:
 
 ```math
-\bra{S_2} e^{i \frac{\hat{E}}{\hbar} T} \ket{S_1} = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} \bra{S_2} \ket{x_2} \bra{x_1} \ket{S_2} \int e^{\frac{i}{\hbar} \int_{0}^{T} L} dy(t)
+\bra{S_2} e^{i \frac{\hat{E}}{\hbar} T} \ket{S_1} = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} \bra{S_2} \ket{x_2} \bra{x_1} \ket{S_2} \int e^{\frac{i}{\hbar} \int_{0}^{T} L} dy(t) dx_1 dx_2
 ```
 
 ## Next Time
