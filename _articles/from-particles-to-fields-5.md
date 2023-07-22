@@ -6,7 +6,7 @@ date: "2023.07.20"
 tags: "qft"
 ---
 
-# Disturbing the Vacuum
+# The Quantum Klein-Gordon Equation
 
 Last time, we introduced the idea of disturbing the vacuum. We used this to derive the form of the **perturbed vacuum weighted path integral**, which we claim can be used to make predictions. Today, we will start studyign a simple system for which we can do so.
 
@@ -119,13 +119,13 @@ We will evaluate this integral in a totally normal and not haunted way. The firs
 We'll start with the path integral itself:
 
 ```math
-\int_{-\infty}^{\infty} \bra{0} \ket{x_2} \bra{x_1} \ket{x_2} \int e^{\frac{i}{\hbar} \int L d^4 x} dy(t)
+\int_{-\infty}^{\infty} \bra{0} \ket{x_2} \bra{x_1} \ket{x_2} \int e^{\frac{i}{\hbar} \int L d^4 x} dF(x, t)
 ```
 
 Substituting in our basic Lagrangian, plus some perturbation term $`J(x) F(x, t)`$:
 
 ```math
-\int_{-\infty}^{\infty} \bra{0} \ket{x_2} \bra{x_1} \ket{x_2} \int e^{\frac{i}{\hbar} \int \frac{1}{2} (\partial_a F)^2 - \frac{m^2}{2} F^2 + J(x) F d^4 x} dy(t)
+\int_{-\infty}^{\infty} \bra{0} \ket{x_2} \bra{x_1} \ket{x_2} \int e^{\frac{i}{\hbar} \int \frac{1}{2} (\partial_a F)^2 - \frac{m^2}{2} F^2 + J(x) F d^4 x} dF(x, t)
 ```
 
 For now, we'll just focus on evaluating the path integral itself. We'll leave the weighted component for another day. We totally won't ignore it until I can dig up some resource that explains why the hell this is always disregarded.

@@ -121,13 +121,15 @@ In practice, this "extra" positional energy function will have to be greatly sim
 Thus at the end of the day, our "practical" vacuum weighted path integral looks like
 
 ```math
-\bra{0} e^{i \frac{\hat{E}}{\hbar} T} \ket{0} = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} \bra{0} \ket{x_2} \bra{x_1} \ket{0} \int e^{i \int_{0}^{T} \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} \frac{1}{2} \partial^2 F - E_P(x, y, z) dx dy dz dt} dy(t) dx_1 dx_2
+\bra{0} e^{i \frac{\hat{E}}{\hbar} T} \ket{0} = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} \bra{0} \ket{x_2} \bra{x_1} \ket{0} \int e^{i \int_{0}^{T} \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} \frac{1}{2} \partial^2 F - E_P(x, y, z) dx dy dz dt} dF(x, t) dx_1 dx_2
 ```
+
+Note that since we've swapped from integrating over particle paths to fields, we must also change our path integral to integrate over all possible field configurations. Leave it to later us to figure out how to write the mass-coefficient of these integrals.
 
 One further change. Now that we're in relativity-land, it's time to start putting space and time on more equal footing. You'll notice that the exponent now contains integrals over all four spatial dimensions -- three over all of space, and one from $`0`$ to $`T`$. To treat everything equally, and to simplify many integrals, we will usually evaluate the time integral over all of time as well (from $`0`$ to $`\infty`$). Doing so allows us to simplify the integral to one over all spacetime:
 
 ```math
-\lim_{T \to \infty} \bra{0} e^{i \frac{\hat{E}}{\hbar} T} \ket{0} = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} \bra{0} \ket{x_2} \bra{x_1} \ket{0} \int e^{i \int_{0}^{T}  \frac{1}{2} \partial^2 F - E_P(x) d^4 x} dy(t) dx_1 dx_2
+\lim_{T \to \infty} \bra{0} e^{i \frac{\hat{E}}{\hbar} T} \ket{0} = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} \bra{0} \ket{x_2} \bra{x_1} \ket{0} \int e^{i \int_{0}^{T}  \frac{1}{2} \partial^2 F - E_P(x) d^4 x} dF(x, t) dx_1 dx_2
 ```
 
 Physically, this integral represents the probability density for the field to stay in the vacuum state forever.
