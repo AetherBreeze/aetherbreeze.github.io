@@ -18,7 +18,7 @@ Recall the expression for the free propagator, derived from momentum tricks base
 D^{-1}(y - x) = \frac{1}{(2 \pi)^4} \int \frac{e^{i (y - x) p}}{p^2 - m^2} d^4 p
 ```
 
-We are accustomed to ignoring the actual mechancis of evaluating integrals by now. However, even by the lax standards of physics, there is a pretty clear problem here: at $`p = \pm m`$, this integrand goes to infinity. There is no easy way to discretize our approximate our way around this. This integral flat-out diverges, and we need to fix it.
+We are accustomed to ignoring the actual mechanics of evaluating integrals by now. However, even by the lax standards of physics, there is a pretty clear problem here: at $`p = \pm m`$, this integrand goes to infinity. There is no easy way to discretize our approximate our way around this. This integral flat-out diverges, and we need to fix it.
 
 The bad news is that there's no way to "truly" fix it without destroying what the propagator is. The good news is that we can get arbitrarily close to fixing it, then take the limit later.
 
