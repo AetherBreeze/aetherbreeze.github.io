@@ -151,7 +151,7 @@ We don't need to worry about the singularities anymore -- we've taken care of th
 We have now solved... the *inner* integral for the propagator. Substituting it back into the full four-dimensional integral from the intro, we get our final-ish expression:
 
 ```math
-D^{-1}(y - x) = \frac{i}{(2 \pi)^3} \int e^{i ((y - x)_\t \omega - (y - x)_\lambda p_\lambda)} \text{step}(p_t) + e^{i (-(y - x)_t \omega - (y - x)_\lambda p_\lambda)} \text{step}(-p_t) dp_\lambda
+D^{-1}(y - x) = \frac{i}{(2 \pi)^3} \int \frac{1}{2 \omega} (e^{i ((y - x)_\t \omega - (y - x)_\lambda p_\lambda)} \text{step}(p_t) + e^{i (-(y - x)_t \omega - (y - x)_\lambda p_\lambda)} \text{step}(-p_t)) dp_\lambda
 ```
 
 This is about as simple as it gets in quantum field theory. It may look complicated right now, but in time, we'll grow to understand each and every part of this expression. We'll wrap up our discussion on it next time before finally (*finally*) moving onto the next chapter.
